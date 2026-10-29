@@ -1,0 +1,11 @@
+LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc
+Input: original workbook formulas; all 22,065 formula caches removed before opening.
+Comparison: independent Python raw-input totals; no generator calculations imported.
+2026-09: PASS — 61 panel comparisons, 49 matched / 3 unmatched / 3 non-sales movements; no cell errors.
+  Sales 779926.70 TRY; collections 573919.16 TRY; remaining 206007.54 TRY.
+  Values agree with the original source KONTROL.txt.
+2026-10: PASS — 61 panel comparisons, 49 matched / 3 unmatched / 3 non-sales movements; no cell errors.
+  Sales 776624.32 TRY; collections 568161.01 TRY; remaining 208463.31 TRY.
+  Values agree with the original source KONTROL.txt.
+Original delivered XLSX unchanged by LibreOffice; only temporary copies recalculated.
+RESULT: PASS — 122 panel comparisons in LibreOffice; PDF exports are actual Calc output.

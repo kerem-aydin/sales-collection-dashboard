@@ -1,0 +1,53 @@
+SALES AND COLLECTIONS / VERIFICATION
+Date: 2026-10-29 15:13:46
+Workbook: sales-collection-dashboard.xlsx
+Calculation engine: formulas 1.3.4
+Comparison: evaluated workbook formulas / independent raw-input calculation (integer cents).
+
+Structure: 6 sheets, 1 native column chart, month validation list, 22065 formulas.
+Capacity: 2,000 sales rows, 2,000 bank rows and 100 customer slots.
+No VBA, dynamic-array functions or evaluation markers.
+
+2026-09: PASS — 61 panel comparisons across all 10 cities.
+  Sales: 779926.70 TRY | Collections: 573919.16 TRY | Remaining: 206007.54 TRY
+  Previous-month sales: 0.00 TRY | Unmatched: 3 | Non-sales: 3
+  49 matched transactions, 3 review rows, empty capacity and error scan: PASS
+
+  İstanbul: sales 83683.73 / collections 62471.80 / remaining 21211.93 TRY
+  Ankara: sales 110101.21 / collections 85375.05 / remaining 24726.16 TRY
+  İzmir: sales 93888.59 / collections 68365.16 / remaining 25523.43 TRY
+  Bursa: sales 96063.97 / collections 69672.20 / remaining 26391.77 TRY
+  Antalya: sales 93690.91 / collections 62293.15 / remaining 31397.76 TRY
+  Konya: sales 47163.94 / collections 33124.91 / remaining 14039.03 TRY
+  Kocaeli: sales 42899.30 / collections 30782.34 / remaining 12116.96 TRY
+  Sakarya: sales 77568.15 / collections 57376.53 / remaining 20191.62 TRY
+  Kayseri: sales 58765.88 / collections 44929.94 / remaining 13835.94 TRY
+  Gaziantep: sales 76101.02 / collections 59528.08 / remaining 16572.94 TRY
+
+2026-10: PASS — 61 panel comparisons across all 10 cities.
+  Sales: 776624.32 TRY | Collections: 568161.01 TRY | Remaining: 208463.31 TRY
+  Previous-month sales: 779926.70 TRY | Unmatched: 3 | Non-sales: 3
+  49 matched transactions, 3 review rows, empty capacity and error scan: PASS
+
+  İstanbul: sales 66089.95 / collections 49805.90 / remaining 16284.05 TRY
+  Ankara: sales 68957.69 / collections 52093.22 / remaining 16864.47 TRY
+  İzmir: sales 122859.59 / collections 88140.10 / remaining 34719.49 TRY
+  Bursa: sales 107585.76 / collections 77589.15 / remaining 29996.61 TRY
+  Antalya: sales 59467.29 / collections 39252.63 / remaining 20214.66 TRY
+  Konya: sales 88673.36 / collections 62929.81 / remaining 25743.55 TRY
+  Kocaeli: sales 67355.71 / collections 48677.40 / remaining 18678.31 TRY
+  Sakarya: sales 64793.94 / collections 47941.47 / remaining 16852.47 TRY
+  Kayseri: sales 58973.24 / collections 44972.17 / remaining 14001.07 TRY
+  Gaziantep: sales 71867.79 / collections 56759.16 / remaining 15108.63 TRY
+
+Additional boundary checks: PASS
+  Last sales/bank row and last customer slot contribute to totals.
+  Ambiguous aliases rejected; new customer resolves unmatched payment.
+  Empty month returns zero totals and a blank change percentage.
+
+Opening cache: verified October engine results written; all 22,065 formulas preserved and cached.
+XLSX SHA256: 8111e3e4edf70909f5344eecdfc129cf611a6ce1432f4890375977576d4e3668
+Duration: 317.2 seconds
+This check does not cover visual or interactive testing in Microsoft Excel.
+
+RESULT: PASS

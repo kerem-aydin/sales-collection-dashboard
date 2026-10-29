@@ -1,0 +1,11 @@
+PUBLIC PACKAGE AUDIT
+Scope: repository text files and every XML/relationship member of the XLSX.
+Name exception: LICENSE contains the explicitly requested copyright holder.
+Company/person review: sample customer names carry fictional markers; no customer contact fields.
+Text and XLSX XML pattern scan: PASS (zero findings).
+Source workbook comparison: PASS (41235 cell values/formulas identical).
+Source preservation: PASS (7160 previously readable files retain their SHA256).
+Source temporary directories denied by Windows ACLs were not accessed or changed.
+Python compile/import: PASS; pinned dependencies: pip check PASS.
+No Git repository created, commit, push or GitHub publication performed.
+RESULT: PASS
