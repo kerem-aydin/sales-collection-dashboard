@@ -1,5 +1,5 @@
 SALES AND COLLECTIONS / VERIFICATION
-Date: 2026-10-29 15:13:46
+Date: 2026-10-29 17:39:53
 Workbook: sales-collection-dashboard.xlsx
 Calculation engine: formulas 1.3.4
 Comparison: evaluated workbook formulas / independent raw-input calculation (integer cents).
@@ -46,8 +46,8 @@ Additional boundary checks: PASS
   Empty month returns zero totals and a blank change percentage.
 
 Opening cache: verified October engine results written; all 22,065 formulas preserved and cached.
-XLSX SHA256: 8111e3e4edf70909f5344eecdfc129cf611a6ce1432f4890375977576d4e3668
-Duration: 317.2 seconds
+XLSX SHA256: 33ffbed239823f2ceab7dc2e8cf0526cbf10b9bce7d01ea525036a95a56b7b96
+Duration: 366.1 seconds
 This check does not cover visual or interactive testing in Microsoft Excel.
 
 RESULT: PASS

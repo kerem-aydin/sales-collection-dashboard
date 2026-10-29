@@ -191,7 +191,7 @@ def create_workbook():
         ss.append(row)
     data_style(ss, 2, LIMIT, 6, 5)
     for r in range(2, LIMIT + 1):
-        ss.cell(r, 6, f'=IF(A{r}="","",TEXT(A{r},"yyyy-mm"))')
+        ss.cell(r, 6, f'=IF(A{r}="","",YEAR(A{r})&"-"&RIGHT("0"&MONTH(A{r}),2))')
         ss.cell(r, 1).number_format = 'dd.mm.yyyy'
         ss.cell(r, 5).number_format = MONEY
     list_validation(ss, '=Iller', 'D2:D2001')
@@ -207,7 +207,7 @@ def create_workbook():
     keys = "'Müşteriler'!$B$2:$B$101"
     for r in range(2, LIMIT + 1):
         hits = f'({keys}<>"")*ISNUMBER(SEARCH({keys},B{r}))'
-        bs.cell(r, 5, f'=IF(A{r}="","",TEXT(A{r},"yyyy-mm"))')
+        bs.cell(r, 5, f'=IF(A{r}="","",YEAR(A{r})&"-"&RIGHT("0"&MONTH(A{r}),2))')
         bs.cell(r, 6, f'=IF(OR(A{r}="",B{r}="",C{r}<=0),"",'
                 f'IF(SUMPRODUCT({hits})=1,IFERROR(INDEX(\'Müşteriler\'!$A$2:$A$101,'
                 f'SUMPRODUCT({hits},ROW({keys})-ROW(\'Müşteriler\'!$B$2)+1)),""),""))')
@@ -254,7 +254,7 @@ def create_workbook():
     list_validation(panel, '=Aylar', 'B4')
     merged(panel, 'C4:F4', 'Ayı listeden seçin · Tüm özetler ve grafik güncellenir', 10, color=MUTED)
     merged(panel, 'H4:L4', 'VERİ KAPSAMI  /  EYLÜL + EKİM 2026', 10, True, MUTED)
-    panel['N2'] = '=TEXT(DATE(LEFT(B4,4),RIGHT(B4,2)-1,1),"yyyy-mm")'
+    panel['N2'] = '=YEAR(DATE(LEFT(B4,4),RIGHT(B4,2)-1,1))&"-"&RIGHT("0"&MONTH(DATE(LEFT(B4,4),RIGHT(B4,2)-1,1)),2)'  # TEXT() format codes are locale-specific (Turkish/German Excel do not read "mm"); YEAR/MONTH work in every locale
     panel['N3'] = '=SUM(F12:F21)'
     panel['N4'] = '=COUNTIFS(\'Banka Dökümü\'!$E$2:$E$2001,$B$4,\'Banka Dökümü\'!$H$2:$H$2001,"Eşleşmedi")'
     panel.column_dimensions['N'].hidden = True
